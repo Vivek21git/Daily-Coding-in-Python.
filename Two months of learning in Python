@@ -1,0 +1,3654 @@
+# If 100 marks paper = 30 Theory+ 70 Practical 
+ 
+#Solve Quadratic Equation
+
+import cmath
+
+a = float(input("Enter the value of a: "))
+b = float(input("Enter the value of b: "))
+c = float(input("Enter the value of c: "))
+
+# Calculate the discriminant
+d = (b**2) - (4 * a * c)
+
+# Find the solutions
+pos = (-b + cmath.sqrt(d)) / (2 * a)
+neg = (-b - cmath.sqrt(d)) / (2 * a)
+
+print("Solutions are: positive value is:", pos, "negative value is:", neg)
+
+
+
+
+#swap number
+
+p=int(input("enter first integer number : "))
+q=int(input("enter second integer number : "))
+
+#Nativ Method used temp variable to swap number
+
+"""temp=1-p
+p=q
+q=abs(temp-1)
+print("P is: ",p,"Q is : ",q)"""
+
+#comma operator
+
+"""p,q=q,p
+print("P is: ",p,"Q is : ",q)"""
+
+#XOR Method 
+
+p=p^q
+q=p^q
+p=p^q
+print("P is: ",p,"Q is : ",q)
+
+
+
+#random number using given range
+
+import random
+num=random.random()
+print(num)
+max=int(input("enter maximum range "))
+min=int(input("enter minimum range "))
+n=random.randint(min,max)
+print("random value in given range is ",n)
+
+#random number using given range using seed for get particular number
+
+import random
+
+random.seed(100)
+num=random.randint(0,50)
+print(num)
+
+#Display Calendar of Given Year and Month
+
+import calendar  
+"""year = int(input ("Please enter the Year: ")) 
+month = int(input ("Please enter the month: "))
+  
+print(calendar.month(year, month))"""
+
+
+#Display Calendar of 12 Month
+
+import calendar
+year = int(input ("Please enter the Year: ")) 
+print(calendar.calendar(year))
+
+
+#calculate the salary of an employee.
+print("SALARY PROGRAM")
+empid=float(input("Enter ID of employee : "))
+name= str(input("Enter name of employee : "))
+basic=float(input("Enter Basic Salary : "))
+da=float(basic*0.35)
+hra=float(basic*0.50)
+pf=float((basic+da)*0.50)
+ta=float(basic*0.10)
+print("\n\n")
+
+print("***---------------------------***")
+
+print("DA of employee : ",da)
+print("HRA of employee : ",hra)
+print("TA of employee : ",ta)
+print("PF of employee : ",pf)
+
+print("***---------------------------***")
+print("\n\n")
+total=basic+hra+da+ta-pf
+print("Total Salary of employee : ",total)
+
+
+2.
+#Revers List
+
+"""list = [1,2,3,4,5]
+
+print(list )
+print(list [-1])"""
+
+txt = "HII" [:: -1]
+print(txt )
+
+
+
+#concatenate to list and string index wise
+"""
+"""l1 = ["M","na","i","sh"]
+l2 = ["y","me","S","anti"]"""
+l1 = [1,2,3,4,5]
+l2 = [5,4,3,2,1]
+l3 = [i+j for i,j in zip(l1,l2)]
+print(l3)
+
+
+#convert every item to its squre
+
+numbers=[1,2,3,4,5,6]
+res=[i*i for i in numbers]
+print(res)
+
+""" l1 = [1,2,3,4,5]
+l2 = [5,4,3,2,1]
+l3 = [i*j for i,j in zip(l1,l2)]
+print(l3)"""
+
+
+#Remove None values from list
+
+l1= ["Happy","","birthday"]
+res= list(filter(None,l1))
+print(res)
+
+#Insert a new item in to list after a specify item
+
+l1= ["Happy","","birthday"]
+res= list(filter(None,l1))
+s="Happy"
+print(len(res))
+res.insert(3,"to You") #inser = index wise update 
+print(res)
+
+
+#Into The Bracket
+
+l1 =["a","b","c",["d","e",["f","g"]]]
+sub_list=["h","i","j"]
+l1[3][2].extend(sub_list)
+print(l1)
+
+"""l1[3][2][1].extend(sub_list)
+print(l1[3])
+print(l1[3][2])
+print(l1[3][2][1])"""
+
+"""l1= [1,2,3,[4,5,[6,7]]]
+print(l1[2])
+print(l1[3])
+print(l1[3][2][1])
+"""
+
+
+#replace a item with new value
+
+l1 = [10,20,30,40,50,20]
+i=l1.index(20)
+l1[i]=200
+print(l1)
+
+
+
+
+#Remove particular item from the list
+
+l1 = [10,20,30,40,50,60,70]
+while 20 in l1:
+    l1.remove(20)
+print(l1)
+
+#enter student name,roll number and any 2 subs marks out of 100.calculate the percentage of student and print the grade according to given rule
+	1.if %<50 grade FF
+	2.if % 50 to 60 grade CC
+	3.if % 60 to 70 grade BC
+	4.if % 70 to 80 grade BB
+	5.if % 80 to 90 grade AB
+	6.if % 90 to 100 grade AA
+name=str(input("Enter Student's Name' : "))
+num=int(input("Enter Student's Roll number : "))
+sub1=int(input("Enter marks of Maths out of 100. : "))
+sub2=int(input("Enter marks of Scince out of 100. : "))
+sub3=int(input("Enter marks of English out of 100. : "))
+T = sub1+sub2+sub3
+print("Total Marks : ",T)
+per= (T/300)*100
+print("persentage : ",per)
+
+if per < 50:
+    grade = "FF"
+elif 50 <= per < 60:
+    grade = "CC"
+elif 60<= per < 70:
+    grade = "BC"
+elif 70<= per < 80:
+    grade = "BB"
+elif 80<= per < 90:
+    grade = "AB"
+elif 90<= per < 100:
+    grade = "AA"
+print("Grade : ",grade )
+
+
+ #calculate year salary of employ and calulate of tex on the basis of folowing rule.
+	1. check gender of employ
+	2. if employ is meal year salary less then 5 lakh,no tex.
+	3. salary 5 to 7 lakh , tex is 10% of in hand salary
+	4. salary 7 to 9 lakh , tex is 10% of in hand salary
+	5. salary above 9 lakh , tex is 30% of in hand salary
+	6. if employ is femeal year salary less then 7 lakh,no tex.
+	7. salary 7 to 9 lakh , tex is 10% of in hand salary.
+	8. salary 9 to 11 lakh , tex is 20% of in hand salary.
+	9. salary above 11 lakh , tex is 30% of in hand salary
+
+def calculate_tax(gender, yearly_salary):
+    if gender == 'male':
+        if yearly_salary <= 500000:
+            tax = 0
+        elif 500000 < yearly_salary <= 700000:
+            tax = 0.1 * yearly_salary
+        elif 700000 < yearly_salary <= 900000:
+            tax = 0.1 * yearly_salary
+        else:
+            tax = 0.3 * yearly_salary
+    elif gender == 'female':
+        if yearly_salary <= 700000:
+            tax = 0
+        elif 700000 < yearly_salary <= 900000:
+            tax = 0.1 * yearly_salary
+        elif 900000 < yearly_salary <= 1100000:
+            tax = 0.2 * yearly_salary
+        else:
+            tax = 0.3 * yearly_salary
+    else:
+        tax = 0
+    
+    return tax
+
+print("SALARY PROGRAM")
+empid=float(input("Enter ID of employee : "))
+name= str(input("Enter name of employee : "))
+gender =str(input("Enter Employ's Gender : "))
+yearly_salary=int(input("Enter Student's yearly salary : "))
+
+da=float(yearly_salary*0.35)
+hra=float(yearly_salary*0.50)
+pf=float((yearly_salary+da)*0.50)
+ta=float(yearly_salary*0.10)
+print("\n\n")
+
+print("***---------------------------***")
+
+print("DA of employee : ",da)
+print("HRA of employee : ",hra)
+print("TA of employee : ",ta)
+print("PF of employee : ",pf)
+
+tax_amount = calculate_tax(gender, yearly_salary)
+print("Tax amount:", tax_amount)
+
+print("***---------------------------***")
+print("\n\n")
+total=yearly_salary+hra+da+ta-pf-tax_amount
+print("Total Salary of employee : ",total)
+
+
+1. Declare a null dictionary and add 2 key value pairs in dictionary.
+#Declare a null dictionary and add 2 key value pairs in dictionary.
+
+d={}
+d['101']="hello"
+d['102']=131
+d['103']=["how are you"]
+d[104]="are"
+d[104]=100
+print(d)
+print(d["103"])
+
+#print only keys
+print(d.keys())
+
+#Find the values of string
+print(d.values())
+
+#find the length of key
+print(len(d))
+
+#delete the value key vise
+del d['102']
+print(d)
+
+
+2. Extract the value of salary using its key value.
+
+2a. Enter 2 numbers and check the following.
+1. both numbers are equal.
+2.1 is less than no. 2
+3..1 is grater than no. 2
+
+
+3. To find maximum of 3 numbers
+
+#To find maximum of 3 numbers
+a=int(input("Enter 1st number : "))
+b=int(input("Enter 2nd number : "))
+c=int(input("Enter 3rd number : "))
+print("maximum number is :",max(a,b,c) )
+max=a if a>b and a>c else b if b>c else c
+print("maximum number is :",max)
+
+4. to check weather the given number is in between 1 to 100.
+
+#to check weather the given number is in between 1 to 100.
+
+a=int(input("Enter 1st number a: "))
+
+
+print("a is between 1 to 100") if 100>= a>0 else print("a is not between 1 to 100")  
+
+
+5. To print character present in given string.
+
+#To print character present in given string.
+s=input("enter a string : ")
+for x in s:
+    print(x)
+
+
+
+6. To print character present in given string index wise.
+
+#To print character present in given string index wise.
+
+s=input("enter a string : ")
+i=0
+
+for x in s:
+    i=i+1
+    print("the charcater present in index at ",i , "input is ",x)
+    
+
+7. Display number from 0 to 10.
+
+"""for i in range(2,11,2):
+    print(i)"""
+    
+"""for i in range(1,11):
+    if i%2==0:
+        print(i)"""
+
+
+8. Display odd number from 0 to 20.
+
+#Display odd number from 0 to 20.
+for i in range(1,20,2):
+    print(i)
+
+9. Display numbers 10 to 1 in descending order.
+
+#Display numbers 10 to 1 in descending order.        
+"""for x in range(10,0,-1):
+    print(x)"""
+
+10. Print Sum of number present insight list.
+
+
+#to print table of a given number
+
+i=int(input("Enter a number for table : "))
+
+
+for x in range(1,11):
+    y=i*x
+    print(f"{i} x {x} = {y}")
+
+
+
+
+11. Given number is palindrome or not.
+
+a=int(input("Enter 3 digit number : "))
+a=str(a)
+rstr = a[::-1]
+print("Number in reverse order : ",rstr)
+if rstr==a:
+    print("Number is palindrome.")
+else:
+        print("Number is not palindrome.")
+
+
+
+12. Calculate factorial of a given number.
+
+a = int(input("Enter a number: "))
+
+factorial=1
+for x in range(1, a + 1):
+    factorial*= x
+
+print("Factorial of", a, ":", factorial)
+
+
+13. Fibonacci series up to range given by user.
+
+range_limit = int(input("Enter the range limit: "))
+
+# Initialize the first two numbers of the series
+fibonacci_series = [0, 1]
+
+# Generate the Fibonacci series
+while fibonacci_series[-1] + fibonacci_series[-2] <= range_limit:
+    next_number = fibonacci_series[-1] + fibonacci_series[-2]
+    fibonacci_series.append(next_number)
+
+# Print the Fibonacci series
+print("Fibonacci series up to", range_limit, ":")
+for number in fibonacci_series:
+    print(number, end=" ")
+
+
+
+
+#Questions:
+Write a program to display stars in a right angle triangle from. type 1).simple 2). Inverted
+
+#Write a program to display stars in a right angle triangle from. 
+
+a=int(input(“Enter a number of row for star pattern”))
+
+Write a program to display stars in pyramid style.    (Equivalent Triangle). type 1).simple 2). inverted
+
+Write a program to print given numbers of stars in a row.
+Write a program to print square patterns with star symbols.
+Write a program to print square patterns with alphabet symbols.
+Write a program to print diamond patterns with star symbols.
+
+
+#Write a program to display stars in a right angle triangle from. 
+
+"""a=int(input("Enter a number of row for star pattern : "))
+
+for n in range (a+1):
+    print(" "*(a),end=" ")
+    print(" *"*n)"""
+    
+#Inverted
+""":a=int(input("Enter a number of row for star pattern : "))
+
+for n in range (a,0,-1):
+    print("* "* n)"""
+    
+#Write a program to display stars in pyramid style.   
+
+"""a=int(input("Enter a number of row for star pattern : "))
+
+for n in range (1,a+1):
+    print(" "*(a-n),end=" ")
+    print(" * "*n)"""
+    
+#Inverted
+
+
+"""a=int(input("Enter a number of row for star pattern : "))
+for n in range (a,0,-1):
+    print(" "*(a-n),end=" ")
+    print(" * "*n)"""
+
+"""#Write a program to print given numbers of stars in a row.
+n=int(input("enter no."))
+for i in range(n):
+    print("*"*n)"""
+
+
+#Write a program to print square patterns with alphabet symbols.
+
+"""n=int(input("enter a no."))
+for i in range(n):
+    print((chr(65+i)+" ")*n)"""appendod
+
+
+
+#Questions:
+Write a program to display all positions of substring in a given main string.
+
+# Input main string and substring
+main_string = input("Enter the main string: ")
+substring = input("Enter the substring: ")
+
+# Find and display positions of substring
+positions = []
+start = 0
+
+while True:
+    index = main_string.find(substring, start)
+    if index == -1:
+        break
+    positions.append(index)
+    start = index + 1
+
+print("Positions of substring in main string:", positions)
+
+
+#s = "I love python."
+s=(input("Enter a string : "))
+"""s=str(s)
+
+
+print(s[2:6][::-1])
+
+print(s[2:][::-1])
+
+print(s[:-1][::-1])"""
+
+
+2 
+
+"""l=s.split()
+l1=[]
+i=0
+while i<len(l):
+    l1.append(l[i][::-1])
+    i=i+1
+output=l1
+print(output)"""
+
+
+Write a program to reverse order of words.
+
+#s = "I love python."
+s=(input("Enter a string : "))
+"""s=str(s)
+
+
+print(s[2:6][::-1])
+
+print(s[2:][::-1])
+
+print(s[:-1][::-1])"""
+
+"""l=s.split()
+l1=[]
+i=0
+while i<len(l):
+    l1.append(l[i][::-1])
+    i=i+1
+from i in l1:
+    print(i)"""
+
+"""s = s.split()[::-1]
+l = []
+i=0
+for i in s:
+	l.append(l[i],[::-1])
+print(" ".join(l))"""
+
+for x in range(len(s)):
+    if x%2==1:
+        print("Insex : ",x,"letter : ",s[x])
+
+
+Write a program to print character at odd position for the given string.
+
+#Write a program to print character at odd position for the given string.
+"""string = (input("Enter a string : "))
+even_char= []
+odd_char = [] 
+for i in range(len(string)):
+	if i % 2 == 0: 
+		even_char.append(string[i])
+	else:
+		odd_char.append(string[i])
+
+# print the odd characters
+print('Odd char: {}'.format(odd_char))
+
+print('even char: {}'.format(even_char))"""
+
+string = input('Enter a string: ')
+
+even_char = ""
+odd_char = ""
+
+for i in range(len(string)):
+    if i % 2 == 0:
+        print(f"even characters:",string[i])
+    else:
+        print(f"Odd characters:",string[i])
+
+# Input string
+string = input("Enter a string: ")
+
+# Printing characters at odd positions
+index = 0
+while index < len(string):
+    if index % 2 == 0:
+        print(string[index])
+    index += 1
+
+
+##Questions:
+
+1.Function to Find the maximum of three numbers.
+
+#Find the maximum of three numbers.
+def Max_of_two(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+def Max_of_three(x_max,y,z):
+    return Max_of_two(x_max,Max_of_two(y,z))
+        
+result=Max_of_three(3, 6, -5)
+print(result)
+
+
+2.Function to Multiply all the numbers in a list.
+#Multiply all the numbers in a list.
+
+def Multiply(numbers):
+    total=1
+    for i in numbers:
+        #total*=i
+        total=total*i
+    return total
+print(Multiply([1,2,3]))
+
+3. Function to Calculate functional factorial  of number, the function accepts the number as argument.
+#Function to Calculate functional factorial  of number, the function accepts the number as argument.
+
+def factorial(number):
+    if number==0:
+        return 1
+    else:
+        return number*fectorial(number-1)
+n=int(input("Enter any number : "))
+#print(fectorial(n))
+print("factorial of",n,"! is : ",fectorial(n))
+
+4.Function that accepts strings and counts the number of upper and lower case letters.
+# Function that accepts strings and counts the number of upper and lower case letters.
+
+def string_count(s):
+    d={"UPPER":0,"lower":0}
+    for i in s:
+        if i.isupper():
+            d["UPPER"]+=1
+        else:
+            d["lower"]+=1
+    return d
+str=(input("Enter string : "))
+print(string_count(str))
+                    
+
+5.Function that text number as a parameter and check whether numbers are prime or not.
+# Function that text number as a parameter and check whether numbers are prime or not.
+
+def Prime_no(no):
+    if no==1:
+        return False
+    elif no==2:
+        return True
+    else:
+        for i in range(2,no):
+            if no%i==0:
+                return False
+            return True
+n=int(input("Enter any number : "))
+print(Prime_no(n))
+
+6.Function To check whether the number  is perfect or not.
+#Function To check whether the number  is perfect or not.
+
+def perfect_no(n):
+    sum=0
+    for i in range(1,n):
+        if n%i==0:
+            sum+=i
+    return sum
+no=int(input("Enter any number : "))
+result=perfect_no(no)
+if result==no:
+    print("Number",no,"is perfect number.")
+else:
+    print("Number",no,"is not perfect number.")
+
+7. To check whether a string is palindrome or not, a to z alphabet is included.
+
+#def 7wap to check whether a string pangram or not(a to  z alphabet are include)
+import string
+def Pangram(str1,alphabet=string.ascii_lowercase):
+    alphaset=set(alphabet)
+    return alphaset<=set(str1.lower())
+str_tx="The Quick brown fox jump over the Lazy dogs"
+print(Pangram(str_tx))
+
+
+8.Function to create and print list where the value are square of number between  1 and 30.
+# Function to create and print list where the value are square of number between  1 and 30.
+
+def square_of_number():
+    l = list()
+    for i in range(1,31):
+        l.append(i**2)
+    return l
+print(square_of_number())
+
+
+9.To execute a string, continuing a python code.
+#To execute a string, continuing a python code.
+
+#To execute a string, continuing a python code.
+
+m='print("Hello how are you")'
+s="""def multiply(x,y):
+    return x*y
+x=int(input("Enter 1st number : "))
+y=int(input("Enter 2nd number : "))
+
+print("result is: ",multiply(x,y))"""
+
+exec(m)
+exec(s)
+
+10.To access a function inside a function.(recursion)
+"""def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+x = int(input("Enter a number: "))
+print("Factorial:", factorial(x))
+print("Fibonacci:", fibonacci(x))"""
+########################
+#def10 access function inside a function(recursion)
+def test(a):#global function
+    def add(b):#local function
+        nonlocal a#access in out of function nonlocal 
+        a+=1
+        return a+b
+    return add
+func=test(5)#outer method call first
+print(func(4))
+
+
+
+11.That involves a function after a specified period of a time.
+
+#def11 invoke a function after a specify period of time.
+from time import sleep
+def delay(fn,ms):
+    sleep(ms/1000)
+    return fn
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+print(delay(add(10,20),10000))
+print(delay(sub(40,20),1000))
+
+	
+
+12.Write a function base menu driven programme to perform all arithmetic operations.
+
+def addition():
+    return x+y
+    #print(addition(a))
+def differentiation():
+    return x-y
+    #print(differentiation(a))
+def multiplication():
+    return x*y
+    #print(multiplication(a))
+def Division():
+    return x/y
+    #print(Division(a))
+
+
+print("\nMENU")
+print("1. addition")
+print("2. differentiation")
+print("3. multiplication")
+print("4. Division")
+    
+choice = int(input("\nEnter your choice of method for calculations: "))
+x = int(input ("Enter the first number : " ) )
+y= int(input ("Enter the second number : " ) )
+
+if choice == 1:
+    print("Addition of two number is : ",addition())
+elif choice == 2:
+    print("differentiation of two number is : ",differentiation())
+elif choice == 3:
+    print("multiplication of two number is : ",multiplication())
+elif choice == 4:
+    print("Division of two number is : ",Division())
+else:
+    print("Invalid Choice")
+
+        
+        
+
+13.Menu base program to do this things:
+Check the sting is palindrome or not
+Check the number is palindrome or not
+Check the number is perfect or not
+Reverse the order of words in a given string
+
+
+def is_palindrome(string):
+    # Remove whitespace and convert to lowercase
+    string = string.replace(" ", "").lower()
+    return string == string[::-1]
+
+def is_number_palindrome(number):
+    # Convert the number to a string
+    string = str(number)
+    # Check if the string is equal to its reverse
+    return string == string[::-1]
+
+def is_perfect_number(number):
+    # Check if the number is equal to the sum of its proper divisors
+    divisors_sum = sum(i for i in range(1, number) if number % i == 0)
+    return number == divisors_sum
+
+def reverse_words(string):
+    # Split the string into words
+    words = string.split()
+    # Reverse the order of words
+    reversed_words = words[::-1]
+    # Join the words back into a string
+    reversed_string = ' '.join(reversed_words)
+    return reversed_string
+
+# Menu function
+def menu():
+    print("Menu:")
+    print("1. Check if a string is a palindrome")
+    print("2. Check if a number is a palindrome")
+    print("3. Check if a number is perfect")
+    print("4. Reverse the order of words in a string")
+    print("5. Exit")
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == "1":
+        string = input("Enter a string: ")
+        if is_palindrome(string):
+            print("The string is a palindrome.")
+        else:
+            print("The string is not a palindrome.")
+    elif choice == "2":
+        number = int(input("Enter a number: "))
+        if is_number_palindrome(number):
+            print("The number is a palindrome.")
+        else:
+            print("The number is not a palindrome.")
+    elif choice == "3":
+        number = int(input("Enter a number: "))
+        if is_perfect_number(number):
+            print("The number is perfect.")
+        else:
+            print("The number is not perfect.")
+    elif choice == "4":
+        string = input("Enter a string: ")
+        reversed_string = reverse_words(string)
+        print("Reversed string:", reversed_string)
+    elif choice == "5":
+        print("Exiting the program...")
+        return
+    else:
+        print("Invalid choice. Please try again.")
+
+# Start the program
+menu()
+
+LAB:8
+#def 1 wap to print fabonacii series up to end terms.(user input)
+
+def Fbonacii_series(num):
+    num1=0
+    num2=1
+    if num1==1:
+        print(num1)
+    else:
+        print(num1)
+        print(num2)
+    for i in range(2,num):
+        n3=num1+num2
+        num1=num2
+        num2=n3
+        print(n3)
+    return n3
+usr=int(input("Enter number :"))
+res=Fbonacii_series(usr)
+    
+#file handling
+#def 1 data file handling program to rea
+#myfile is file pointername
+myfile=open("first_filehandling.txt","r")
+str1=myfile.read(10)#only read 10 character
+str2=myfile.read(5)#only read 5 character
+str3=myfile.read()#all 
+#str1=myfile.read()#in first read() read all string in given file
+#str2=myfile.read(10)
+#str3=myfile.read(5)
+print("output of first read :")
+print(str1)
+print("output of second read :")
+print(str2)
+print("output of third read :")
+print(str3)
+myfile.close()
+
+#def 2 readline()
+myfile=open(r"C:\Users\SD2121\Desktop\python lec\pyhton file lecture\first_filehandling.txt","r")
+str1=myfile.readline()#only read 10 character
+str2=myfile.readline()#only read 5 character
+str3=myfile.readline(10)#all 
+#print("output of first read :")
+print(str1)
+#print("output of second read :")
+print(str2)
+#print("output of third read :")
+print(str3)
+myfile.close()
+
+#def3 read all string in file readline()
+myfile=open(r"C:\Users\SD2121\Desktop\python lec\pyhton file lecture\first_filehandling.txt","r")
+str=" "
+#while str:
+#    str=myfile.readline()
+    #print(str,end=" ")
+#myfile.close()
+#using for loop
+for i in myfile:
+    str=myfile.readline()
+    print(str,end=" ")
+
+#def 4 total size and removing all EOL and blank lines.
+myfile=open("first_filehandling.txt","r")
+str1=" "
+size=0
+tsize=0
+while str1:
+    str1=myfile.readline()
+    tsize=tsize+len(str1)
+    size=size+len(str1.strip())
+print("Total size :",tsize)
+print("size after removing all EOL and blank lines :",size)
+myfile.close()
+
+#def 5exercise 1 wap to calculate number of lines in file.
+myfile=open("upper.txt","r")
+val=0
+for i in myfile:
+    if i.strip():
+        val=val+1
+print("No of lines is :",val)
+myfile.close()
+
+#def 6exercises2 python convert data of file in upper case letters.
+myfile=open("upper.txt","r")
+str1=" "
+str1=myfile.read()#read() convert all file data.
+print(str1.upper())
+myfile.close()
+
+
+
+LAB : 9
+#def1 wap function to count and display the total of words in a file.
+def Count_words():
+    myfile=open("file_words.txt","r")
+    count=0
+    d=myfile.read()
+    words=d.split()
+    for i in words:
+        count=count+1
+    print("No of file words are :",count)
+    myfile.close()
+Count_words()
+
+#def 2 waf in python to read lines from a text file to find and display the occurance of the word'The'.
+def Find_the():
+    fp=open("file_words.txt",'r')
+    d=fp.read()
+    count=0
+    words=d.split()
+    for i in words:
+        if i=="THE" or i=='the' or i=="The":
+            count=count+1
+    print("No of \'the' is :",count)
+    fp.close()
+Find_the()
+
+
+#def 3 wap readlines from text file and display those words which are <4 character.
+def lessthan_four():
+    fp=open("file_words.txt","r")
+    d=fp.read()
+    count=0
+    words=d.split()
+    for i in words:
+        if len(i)<4:
+            count=count+1
+    print("less than 4 words are :",count)
+    fp.close()
+lessthan_four()
+
+
+#def 4 waf to count words in text file those are ending with alphabet 'e'.
+def find_ending_E():
+    fp=open("file_words.txt","r")
+    d=fp.read()
+    count=0
+    words=d.split()
+    for i in words:
+        if i[-1]=='e':
+            count=count+1
+    print("Endind with 'e' :",count)
+    fp.close()
+find_ending_E()
+
+#def 5 wap to count uppercase character in text file.
+def Uppercase_character():
+    fp=open("file_words.txt","r")
+    count=0
+    d=fp.read()   
+    for i in d:
+        if i.isupper():
+            count=count+1
+    print("No of UPPER character is :",count)
+    fp.close()
+Uppercase_character()
+
+
+#def 6 Binary file has structure book no,book name,author prize.
+#1)write a user define function to  input data for a record and binary file.
+#2)write function which accept the auther name as parameter and count and return no of books by given auther are stored in binary file.
+#3)create method to count no of book whose in price<=500.
+import pickle
+def createfile():
+    fp=open("book.dat","ab")
+    book_no=int(input("Enter book no :"))
+    book_name=input("Enter Book name :")
+    author=input("Enter author name :")
+    price=int(input("Enter price :"))
+    record=[book_no,book_name,author,price]
+    pickle.dump(record,fp)
+    fp.close()
+
+#count author record
+def countrecord(author):
+    fp=open("book.dat","rb")
+    count=0
+    try:
+        while True:
+            record=pickle.load(fp)
+            if record[2]==author:
+                count=count+1
+    except EOFError:                                                                                                       
+        pass
+    return count
+    fp.close()
+
+
+def test():
+    while True:
+        createfile()
+        ch=input("Enter your choice Y/N")
+        if ch in 'Nn':
+            break
+        author=input("Enter Author name :")
+        n=countrecord(author)
+        print("no of books are :",n)
+
+#price is <500 count
+def Prize_of_book():
+    fp=open("book.dat","rb")
+    count=0
+    try:
+        while True:
+                record=pickle.load(fp)
+                #print("....................",record)
+                if record[3]<=500:
+                    count=count+1
+                    print(record)
+    except EOFError:
+        pass
+    return count
+    fp.close()
+#test()
+Prize_of_book()
+
+#def 7 wap to replace character i in place of j in your text file and display the output.
+def Repalce_character():
+    fp=open("file_words.txt","r")
+    d=fp.read()
+    rel=d.replace("i","j")
+    print(rel)
+Repalce_character()
+            
+
+LAB : 10
+#def 1 create binary file.
+import pickle
+def employee_create():
+    fp=open("employee.dat","ab")
+    emp_id=int(input("Enter employee ID :"))
+    emp_nm=input("Enter employee name :")
+    emp_desg=input("Enter Desgnation :")
+    emp_sal=int(input("Enter employee salary :"))
+    emp_exp=int(input("Enter Experience :"))
+    emp_dob=input("Enter employee DOB :")
+    emp_join_dt=input("Enter employee join of date :")
+    record=[emp_id,emp_nm,emp_desg,emp_sal,emp_exp,emp_dob,emp_join_dt]
+    pickle.dump(record,fp)
+    fp.close()
+#employee_create()
+def view_data():
+    fp=open("employee.dat","rb")
+    try:
+        while True:
+            record=pickle.load(fp)   
+            print("Employee Id",record[0])
+            print("Employee name :",record[1])
+            print("Employee Designation :",record[2])
+            print("Employee salary :",record[3])
+            print("Employee Experience :",record[4])
+            print("Employee DOB :",record[5])
+            print("Employee join of date :",record[6])
+            #print(record)
+    except EOFError:
+        pass
+    fp.close()
+def search_desgnation(desgnation):
+    fp=open("employee.dat","rb")
+    try:
+        while True:
+            record=pickle.load(fp)
+            if record[2]==desgnation:
+                print("Employee Id",record[0])
+                print("Employee name :",record[1])
+                print("Employee Designation :",record[2])
+                print("Employee salary :",record[3])
+                print("Employee Experience :",record[4])
+                print("Employee DOB :",record[5])
+                print("Employee join of date :",record[6])
+            else:
+                pass
+    except EOFError:
+        pass
+    fp.close()
+def menu_waise():
+    while True:
+        print("1. Insert record\n 2.View record \n 3.Search Designation  ")
+        choice=int(input("enter Your choice :"))
+        if choice==1:
+            employee_create()
+            ch=input("Enter your choice Y/N :")
+            if ch in 'Nn':
+                break
+        elif choice==2:
+            view_data()
+        elif choice==3:
+            des=input("Enter desgination to search :")
+            search_desgnation(des)
+        else:
+            break
+            
+#view_data()
+#search_desgnation()
+menu_waise()
+
+
+
+def create():
+    fp=open("data_text.txt","a")
+    emp_id=input("Enter employee ID :")
+    emp_nm=input("Enter employee name :")
+    emp_desg=input("Enter Desgnation :")
+    emp_sal=input("Enter employee salary :")
+    emp_exp=input("Enter Experience :")
+    emp_dob=input("Enter employee DOB :")
+    emp_join_dt=input("Enter employee join of date :")
+    record=[emp_id,",",emp_nm,",",emp_desg,",",emp_sal,",",emp_exp,",",emp_dob,",",emp_join_dt]  
+    fp.writelines(record)
+    fp.close()
+create()
+def view_data():
+    fp=open("data_text.txt","r")
+    while True:
+        record=fp.readline()
+        if not record:
+            break
+        record1=record.split(",")
+        print("Employee Id",record1[0])
+        print("Employee name :",record1[1])
+        print("Employee Designation :",record1[2])
+        print("Employee salary :",record1[3])
+        print("Employee Experience :",record1[4])
+        print("Employee DOB :",record1[5])
+        print("Employee join of date :",record1[6])
+
+    fp.close()
+view_data()
+
+17/7/2023
+
+Make a calculator:
+
+#cube of a number
+
+def cube (no):
+    return no*no*no
+result=cube(5)
+print("Result is:",result)
+
+#cube of a number with use of lambda
+result = lambda no:no*no*no
+print("Result is:",result(5))
+
+
+#Convert a string into uppercase using lambda 
+
+
+l=("happy birthday")
+result = lambda string:string.upper()
+print(result(l))
+
+
+#make a calculator using a lambda function
+
+add=lambda a,b:a+b
+sub=lambda a,b:a-b
+mul=lambda a,b:a*b
+div=lambda a,b:a/b
+mod=lambda a,b:a%b
+
+print("Menu For Calculation \n 1: Addition \n 2: Substraction \n 3: Multiplication \n 4: Division \n 5: Modulo")
+ch=int(input("Enter your choice : "))
+no1=int(input("Enter 1st Number : "))
+no2=int(input("Enter 2nd Number : "))
+if ch==1:
+    print("Addition is:" ,add(no1,no2))
+elif ch==2:
+    print("Subtraction is:" ,sub(no1,no2))
+elif ch==3:
+    print("Multiplication is:" ,mul(no1,no2))
+elif ch==4:
+    print("Division is:" ,div(no1,no2))
+elif ch==5:
+    print("Modulo is:" ,mod(no1,no2))
+else:
+    pass
+
+
+
+
+#simple calculator with GUI
+
+
+import tkinter as tk
+
+# Function to perform the calculation
+def calculate():
+    try:
+        result = eval(entry.get())  # Evaluate the expression
+        entry.delete(0, tk.END)     # Clear the input field
+        entry.insert(tk.END, str(result))  # Display the result
+    except:
+        entry.delete(0, tk.END)
+        entry.insert(tk.END, "Error")
+
+# Create the main window
+window = tk.Tk()
+window.title("Simple Calculator")
+
+# Create the entry field
+entry = tk.Entry(window, width=30)
+entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+
+# Create the buttons
+buttons = [
+    "7", "8", "9", "/",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "0", ".", "=", "+"
+]
+
+# Function to handle button clicks
+def button_click(value):
+    current = entry.get()
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, current + value)
+
+# Add the buttons to the window
+row = 1
+col = 0
+for button in buttons:
+    tk.Button(window, text=button, width=5, command=lambda button=button: button_click(button)).grid(row=row, column=col, padx=5, pady=5)
+    col += 1
+    if col > 3:
+        col = 0
+        row += 1
+
+# Create the equals button
+tk.Button(window, text="=", width=20, command=calculate).grid(row=row, column=0, columnspan=4, padx=5, pady=5)
+
+# Run the main event loop
+window.mainloop()
+
+
+
+New
+
+
+import tkinter as tk
+
+def button_click(number):
+    current = entry.get()
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, current + str(number))
+
+def button_clear():
+    entry.delete(0, tk.END)
+
+def button_equal():
+    try:
+        result = eval(entry.get())
+        entry.delete(0, tk.END)
+        entry.insert(tk.END, result)
+    except Exception:
+        entry.delete(0, tk.END)
+        entry.insert(tk.END, "Error")
+
+root = tk.Tk()
+root.title("Calculator")
+
+entry = tk.Entry(root, width=35, borderwidth=5)
+entry.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+
+button_1 = tk.Button(root, text="1", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(1))
+button_2 = tk.Button(root, text="2", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(2))
+button_3 = tk.Button(root, text="3", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(3))
+button_4 = tk.Button(root, text="4", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(4))
+button_5 = tk.Button(root, text="5", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(5))
+button_6 = tk.Button(root, text="6", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(6))
+button_7 = tk.Button(root, text="7", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(7))
+button_8 = tk.Button(root, text="8", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(8))
+button_9 = tk.Button(root, text="9", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(9))
+button_0 = tk.Button(root, text="0", padx=40, pady=20, fg="black", bg="light blue", command=lambda: button_click(0))
+
+button_add = tk.Button(root, text="+",fg="black", bg="light blue",padx=40, pady=20, command=lambda: button_click('+'))
+button_subtract = tk.Button(root, text="-",fg="black", bg="light blue", padx=40, pady=20, command=lambda: button_click('-'))
+button_multiply = tk.Button(root, text="*",fg="black", bg="light blue", padx=40, pady=20, command=lambda: button_click('*'))
+button_divide = tk.Button(root, text="/",fg="black", bg="light blue", padx=40, pady=20, command=lambda: button_click('/'))
+
+button_equal = tk.Button(root, text="=",fg="black", bg="light blue",padx=40, pady=20, command=button_equal)
+button_clear = tk.Button(root, text="Clear", padx=79, pady=20, command=button_clear)
+
+# Arrange the buttons on the grid
+button_1.grid(row=1, column=0)
+button_2.grid(row=1, column=1)
+button_3.grid(row=1, column=2)
+
+button_4.grid(row=2, column=0)
+button_5.grid(row=2, column=1)
+button_6.grid(row=2, column=2)
+
+button_7.grid(row=3, column=0)
+button_8.grid(row=3, column=1)
+button_9.grid(row=3, column=2)
+
+button_0.grid(row=4, column=0)
+
+button_add.grid(row=4, column=1)
+button_subtract.grid(row=4, column=2)
+
+button_multiply.grid(row=5, column=0)
+button_divide.grid(row=5, column=1)
+button_equal.grid(row=5, column=2, columnspan=2)
+button_clear.grid(row=6, column=0, columnspan=3)
+
+root.mainloop()
+
+
+
+
+
+New
+
+from tkinter import *
+
+
+expression = ""
+
+
+
+def press(num):
+
+	global expression
+
+
+	expression = expression + str(num)
+
+	equation.set(expression)
+
+
+
+def equalpress():
+	
+
+	try:
+
+		global expression
+
+		
+		total = str(eval(expression))
+
+		equation.set(total)
+
+		expression = ""
+
+	
+	except:
+
+		equation.set(" error ")
+		expression = ""
+
+
+def clear():
+	global expression
+	expression = ""
+	equation.set("")
+
+
+# Driver code
+if __name__ == "__main__":
+	gui = Tk()
+
+	gui.configure(background="gray")
+
+	gui.title("Siple Calculator")
+
+
+	gui.geometry("255x250")
+
+
+	equation = StringVar()
+
+
+	expression_field = Entry(gui, textvariable=equation)
+
+
+	expression_field.grid(columnspan=5, ipadx=70)
+
+
+	button1 = Button(gui, text=' 1 ',  fg="black", bg="light blue",
+					command=lambda: press(1), height=30, width=7)
+	button1.grid(row=2, column=0)
+
+	button2 = Button(gui, text=' 2 ',  fg="black", bg="light blue",
+					command=lambda: press(2), height=3, width=7)
+	button2.grid(row=2, column=1)
+
+	button3 = Button(gui, text=' 3 ',  fg="black", bg="light blue",
+					command=lambda: press(3), height=3, width=7)
+	button3.grid(row=2, column=2)
+
+	button4 = Button(gui, text=' 4 ',  fg="black", bg="light blue",
+					command=lambda: press(4), height=3, width=7)
+	button4.grid(row=3, column=0)
+
+	button5 = Button(gui, text=' 5 ',  fg="black", bg="light blue",
+					command=lambda: press(5), height=3, width=7)
+	button5.grid(row=3, column=1)
+
+	button6 = Button(gui, text=' 6 ',  fg="black", bg="light blue",
+					command=lambda: press(6), height=3, width=7)
+	button6.grid(row=3, column=2)
+
+	button7 = Button(gui, text=' 7 ',  fg="black", bg="light blue",
+					command=lambda: press(7), height=3, width=7)
+	button7.grid(row=4, column=0)
+
+	button8 = Button(gui, text=' 8 ',  fg="black", bg="light blue",
+					command=lambda: press(8), height=3, width=7)
+	button8.grid(row=4, column=1)
+
+	button9 = Button(gui, text=' 9 ',  fg="black", bg="light blue",
+					command=lambda: press(9), height=3, width=7)
+	button9.grid(row=4, column=2)
+
+	button0 = Button(gui, text=' 0 ',  fg="black", bg="light blue",
+					command=lambda: press(0), height=3, width=7)
+	button0.grid(row=5, column=0)
+
+	plus = Button(gui, text=' + ',  fg="black", bg="light blue",
+				command=lambda: press("+"), height=3, width=7)
+	plus.grid(row=2, column=3)
+
+	minus = Button(gui, text=' - ',  fg="black", bg="light blue",
+				command=lambda: press("-"), height=3, width=7)
+	minus.grid(row=3, column=3)
+
+	multiply = Button(gui, text=' * ',  fg="black", bg="light blue",
+					command=lambda: press("*"), height=3, width=7)
+	multiply.grid(row=4, column=3)
+
+	divide = Button(gui, text=' / ',  fg="black", bg="light blue",
+					command=lambda: press("/"), height=3, width=7)
+	divide.grid(row=5, column=3)
+
+	equal = Button(gui, text=' = ',  fg="black", bg="light blue",
+				command=equalpress, height=3, width=7)
+	equal.grid(row=5, column=2)
+
+	clear = Button(gui, text='Clear',  fg="black", bg="light blue",
+				command=clear, height=3, width=7)
+	clear.grid(row=5, column='1')
+
+
+	gui.mainloop()
+
+
+
+
+
+
+#make a registration form
+
+import tkinter as tk
+from tkinter import messagebox
+
+def register():
+    name = entry_name.get()
+    gender = gender_var.get()
+    phone = entry_phone.get()
+
+    if name.strip() == "":
+        messagebox.showerror("Error", "Please enter your name.")
+    elif gender == "":
+        messagebox.showerror("Error", "Please select your gender.")
+    elif phone.strip() == "":
+        messagebox.showerror("Error", "Please enter your phone number.")
+    else:
+        messagebox.showinfo("Success", "Registration successful!")
+        # You can add further processing here, like saving the data to a file or database.
+
+# Create the main application window
+root = tk.Tk()
+root.title("Registration Form")
+
+# Name Entry
+label_name = tk.Label(root, text="Name:")
+label_name.pack()
+entry_name = tk.Entry(root)
+entry_name.pack()
+
+# Gender Radio Buttons
+label_gender = tk.Label(root, text="Gender:")
+label_gender.pack()
+gender_var = tk.StringVar()
+gender_var.set("")  # Initialize with an empty value
+male_radio = tk.Radiobutton(root, text="Male", variable=gender_var, value="Male")
+female_radio = tk.Radiobutton(root, text="Female", variable=gender_var, value="Female")
+male_radio.pack()
+female_radio.pack()
+
+# Phone Entry
+label_phone = tk.Label(root, text="Phone No:")
+label_phone.pack()
+entry_phone = tk.Entry(root)
+entry_phone.pack()
+
+# Submit Button
+submit_button = tk.Button(root, text="Register", command=register)
+submit_button.pack()
+
+# Start the GUI event loop
+root.mainloop()
+
+
+
+#make a registration form(NEW)
+
+
+import tkinter as tk
+from tkinter import ttk
+
+def submit_form():
+    full_name = entry_full_name.get()
+    gender = gender_var.get()
+    email = entry_email.get()
+    age = entry_age.get()
+    country = country_var.get()
+
+    # You can perform any additional processing with the gathered data here.
+    # For now, let's just print it to the console.
+    print(f"Full Name: {full_name}")
+    print(f"Gender: {gender}")
+    print(f"Email: {email}")
+    print(f"Age: {age}")
+    print(f"Country: {country}")
+
+    # You can add your database operations or other actions here.
+
+root = tk.Tk()
+root.title("Registration Form")
+
+# Labels
+label_full_name = ttk.Label(root, text="Full Name:")
+label_full_name.grid(row=0, column=0, padx=5, pady=5)
+
+label_gender = ttk.Label(root, text="Gender:")
+label_gender.grid(row=1, column=0, padx=5, pady=5)
+
+label_email = ttk.Label(root, text="Email:")
+label_email.grid(row=2, column=0, padx=5, pady=5)
+
+label_age = ttk.Label(root, text="Age:")
+label_age.grid(row=3, column=0, padx=5, pady=5)
+
+label_country = ttk.Label(root, text="Country:")
+label_country.grid(row=4, column=0, padx=5, pady=5)
+
+# Entry Widgets
+entry_full_name = ttk.Entry(root)
+entry_full_name.grid(row=0, column=1, padx=5, pady=5)
+
+# Radio Buttons for Gender
+gender_var = tk.StringVar()
+radio_male = ttk.Radiobutton(root, text="Male", value="Male", variable=gender_var)
+radio_female = ttk.Radiobutton(root, text="Female", value="Female", variable=gender_var)
+radio_male.grid(row=1, column=1, padx=5, pady=5)
+radio_female.grid(row=1, column=2, padx=5, pady=5)
+
+entry_email = ttk.Entry(root)
+entry_email.grid(row=2, column=1, padx=5, pady=5)
+
+entry_age = ttk.Entry(root)
+entry_age.grid(row=3, column=1, padx=5, pady=5)
+
+# Combobox for Country
+countries = ['Country A', 'Country B', 'Country C', 'Country D']  # Replace with your list of countries
+country_var = tk.StringVar()
+country_combobox = ttk.Combobox(root, textvariable=country_var, values=countries)
+country_combobox.grid(row=4, column=1, padx=5, pady=5)
+
+# Submit Button
+submit_button = ttk.Button(root, text="Submit", command=submit_form)
+submit_button.grid(row=5, column=0, columnspan=2, padx=5, pady=10)
+
+root.mainloop()
+
+
+
+NEW
+
+
+import tkinter as tk
+from tkinter import ttk
+
+base = tk.Tk()
+base.geometry('500x500')
+base.title("Registration Form")
+
+labl_0 = ttk.Label(base, text="Registration form", width=20, font=("bold", 20))
+labl_0.place(x=90, y=53)
+
+labl_1 = ttk.Label(base, text="Full Name:", width=20, font=("bold", 15))
+labl_1.place(x=80, y=130)
+
+entry_1 = ttk.Entry(base)
+entry_1.place(x=240, y=130)
+
+labl_2 = ttk.Label(base, text="Email", width=20, font=("bold", 10))
+labl_2.place(x=68, y=180)
+
+entry_2 = ttk.Entry(base)
+entry_2.place(x=240, y=180)
+
+labl_3 = ttk.Label(base, text="Gender", width=20, font=("bold", 10))
+labl_3.place(x=70, y=230)
+var_gender = tk.IntVar()
+ttk.Radiobutton(base, text="Male", padx=5, variable=var_gender, value=1).place(x=235, y=230)
+ttk.Radiobutton(base, text="Female", padx=20, variable=var_gender, value=2).place(x=290, y=230)
+
+labl_4 = ttk.Label(base, text="Age:", width=20, font=("bold", 10))
+labl_4.place(x=70, y=280)
+
+entry_3 = ttk.Entry(base)
+entry_3.place(x=240, y=280)
+
+ttk.Button(base, text='Submit', width=20, bg='brown', fg='white').place(x=180, y=380)
+
+# it will be used for displaying the registration form onto the window
+base.mainloop()
+
+print("Registration form is created successfully...")
+
+
+
+New
+
+
+import tkinter as tk
+from tkinter import ttk
+
+base = tk.Tk()
+base.geometry('500x500')
+base.title("Registration Form")
+
+# Create a Canvas widget to cover the entire form
+canvas = tk.Canvas(base, width=500, height=500, bg='lightgray')
+canvas.pack()
+
+# Create a background rectangle on the canvas to set the color
+canvas.create_rectangle(0, 0, 500, 500, fill='lightgray')
+
+labl_0 = ttk.Label(base, text="Registration form", width=20, font=("bold", 20))
+labl_0.place(x=90, y=53)
+
+labl_1 = ttk.Label(base, text="Full Name:", width=20, font=("bold", 15))
+labl_1.place(x=80, y=130)
+
+entry_1 = ttk.Entry(base)
+entry_1.place(x=240, y=130)
+
+labl_2 = ttk.Label(base, text="Email", width=20, font=("bold", 10))
+labl_2.place(x=68, y=180)
+
+entry_2 = ttk.Entry(base)
+entry_2.place(x=240, y=180)
+
+labl_3 = ttk.Label(base, text="Gender", width=20, font=("bold", 10))
+labl_3.place(x=70, y=230)
+var_gender = tk.IntVar()
+ttk.Radiobutton(base, text="Male", padx=5, variable=var_gender, value=1).place(x=235, y=230)
+ttk.Radiobutton(base, text="Female", padx=20, variable=var_gender, value=2).place(x=290, y=230)
+
+labl_4 = ttk.Label(base, text="Age:", width=20, font=("bold", 10))
+labl_4.place(x=70, y=280)
+
+entry_3 = ttk.Entry(base)
+entry_3.place(x=240, y=280)
+
+ttk.Button(base, text='Submit', width=20, bg='brown', fg='white').place(x=180, y=380)
+
+# it will be used for displaying the registration form onto the window
+base.mainloop()
+
+print("Registration form is created successfully...")
+
+
+#Only Simple Registration Form FINAL 
+
+import tkinter as t
+canvas=t.Tk()
+canvas.geometry('500x500')
+
+canvas.title("Registration Form")
+label0=t.Label(canvas,text="Registration Form",width=20,font=("bold",20))
+label0.place(x=90,y=53)
+
+label1=t.Label(canvas,text="Full name",width=20,font=("bold",10))
+label1.place(x=80,y=130)
+entry01=t.Entry(canvas)
+entry01.place(x=240,y=130)
+
+label2=t.Label(canvas,text="Email",width=20,font=("bold",10))
+label2.place(x=68,y=180)
+entry02=t.Entry(canvas)
+entry02.place(x=240,y=180)
+
+
+label3=t.Label(canvas,text="Gender",width=20,font=("bold",10))
+label3.place(x=70,y=230)
+t.Radiobutton(canvas,text="Male",padx=5,value="Male").place(x=235,y=230)
+t.Radiobutton(canvas,text="Female",padx=20,value="Female").place(x=290,y=230)
+t.Radiobutton(canvas,text="Other",padx=5,value="Other").place(x=500,y=230)
+
+label4=t.Label(canvas,text="age:",width=20,font=("bold",10))
+label4.place(x=70,y=280)
+entry02=t.Entry(canvas)
+entry02.place(x=240,y=280)
+
+
+list_of_country=("United State","India","Nepal","Germany")
+cv=t.StringVar()
+drplist=t.OptionMenu(canvas,cv,*list_of_country)
+drplist.config(width=20)
+cv.set("united state")
+label5=t.Label(canvas,text="select country",width=20,font=("bold",10))
+label5.place(x=70,y=320)
+drplist.place(x=240,y=320)
+t.Button(canvas,text="submit",width=20,bg="brown",fg="white").place(x=180,y=380)
+
+canvas.mainloop()
+
+print("Registration form is created successfully...")
+
+
+
+ #Product Registration form is create
+
+import tkinter as t
+canvas=t.Tk()
+canvas.geometry('500x500')
+
+canvas.title("Product Details Form")
+label0=t.Label(canvas,text="Product Details Form",width=20,font=("bold",20))
+label0.place(x=90,y=53)
+
+label1=t.Label(canvas,text="Product Name",width=20,font=("bold",10))
+label1.place(x=80,y=130)
+entry01=t.Entry(canvas)
+entry01.place(x=240,y=130)
+
+label2=t.Label(canvas,text="Product Price",width=20,font=("bold",10))
+label2.place(x=80,y=180)
+entry02=t.Entry(canvas)
+entry02.place(x=240,y=180)
+
+
+label3=t.Label(canvas,text="Quntity",width=20,font=("bold",10))
+label3.place(x=80,y=230)
+t.Radiobutton(canvas,text="250 gm",padx=5,value="250 gm").place(x=235,y=230)
+t.Radiobutton(canvas,text="500 gm",padx=20,value="500 gm").place(x=290,y=230)
+t.Radiobutton(canvas,text="1 kg",padx=5,value="1 kg").place(x=380,y=230)
+
+label4=t.Label(canvas,text="Product Discription:",width=20,font=("bold",10))
+label4.place(x=70,y=280)
+entry02=t.Entry(canvas)
+entry02.place(x=240,y=280)
+
+
+list_of_catagary=("Electronic","Groccery","Cloths","Footwares")
+cv=t.StringVar()
+drplist=t.OptionMenu(canvas,cv,*list_of_catagary)
+drplist.config(width=20)
+cv.set("Groccery")
+label5=t.Label(canvas,text="Select Catagary",width=20,font=("bold",10))
+label5.place(x=70,y=320)
+drplist.place(x=240,y=320)
+
+t.Button(canvas,text="submit",width=20,bg="brown",fg="white").place(x=180,y=380)
+
+canvas.mainloop()
+
+print(" Product Registration form is created successfully...")
+
+
+#Conect to MYSQl database using XAMPP
+
+—------------------------------------------------
+(For install MySQL database in Spyder : pip install mysql)
+—------------------------------------------------
+[ For Creat MSQLdb (database) : 
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password=" ") ]
+—------------------------------------------------
+
+
+
+# Create a table in MYSQLdb with the name of “employeedb”
+
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password="")
+
+
+cursor = db1.cursor()
+cursor.execute("DROP database IF EXISTS employeedb")
+
+#preparing Query to creat a database
+sql ="CREATE database employeedb";
+
+#Creating a database
+cursor.execute(sql)
+
+#Retrieving the list of database
+print("List of databases: ")
+cursor.execute("SHOW DATABASES")
+print(cursor.fetchall())
+
+#closing the connection
+db1.close()
+
+
+# Add Elements in employeedb
+
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password="",db="employeedb")
+
+cursor = db1.cursor()
+cursor.execute("DROP database IF EXISTS EMPLOYEE")
+
+#preparing Quary to creat a database
+sql ='''CREATE TABLE EMPLOYEE(
+        EMP_ID INT(20) NOT NULL,
+    FIRST_NAME CHAR(20),
+    AGE INT,
+    SEX CHAR(1),
+    INCOME FLOAT
+)'''
+
+#Creating a database
+cursor.execute(sql)
+
+
+
+# INSERT INTO EMPLOYEE 
+
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password="",db="employeedb")
+
+cursor = db1.cursor()
+#cursor.execute("DROP database IF EXISTS EMPLOYEE")
+
+#preparing Quary to creat a database
+sql ='''CREATE TABLE EMPLOYEE(
+        EMP_ID INT(20) NOT NULL,
+    FIRST_NAME CHAR(20),
+    AGE INT,
+    SEX CHAR(1),
+    INCOME FLOAT
+)'''
+
+sql1='''INSERT INTO EMPLOYEE VALUES (1,"SHANTI",25,"F",25000)'''
+sql2='''INSERT INTO EMPLOYEE VALUES (2,"VAIBHAV",27,"M",28000)'''
+sql3='''INSERT INTO EMPLOYEE VALUES (3,"JAY",20,"F",26000)'''
+sql4='''INSERT INTO EMPLOYEE VALUES (4,"JOY",26,"M",29000)'''
+sql5='''INSERT INTO EMPLOYEE VALUES (5,"JANVI",25,"M",20000)'''
+sql6='''INSERT INTO EMPLOYEE VALUES (6,"KRUNAL",28,"F",50000)'''
+
+
+
+#Creating a database
+#cursor.execute(sql)
+try:
+    cursor.execute(sql2)
+    cursor.execute(sql3)
+    db1.commit()
+except:
+    db1.close()
+
+—----------------------------------------
+
+
+
+
+
+
+# SHOW SELECTED VALUES INTO EMPLOYEE TABLE
+
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password="",db="employeedb1")
+
+cursor = db1.cursor()
+#cursor.execute("DROP database IF EXISTS employeedb1")
+
+#preparing Query to creat a database
+sql ='''CREATE TABLE EMPLOYEE(
+        EMP_ID INT(20) NOT NULL,
+    FIRST_NAME CHAR(20),
+    AGE INT,
+    SEX CHAR(1),
+    INCOME FLOAT
+)'''
+
+sql1='''INSERT INTO EMPLOYEE VALUES (1,"SHANTI",25,"F",25000)'''
+sql2='''INSERT INTO EMPLOYEE VALUES (2,"VAIBHAV",27,"M",28000)'''
+sql3='''DELETE FROM EMPLOYEE WHERE AGE<27'''
+
+sql4='''SELECT * from EMPLOYEE WHERE AGE<27'''
+
+cursor.execute(sql4)
+
+result1 = cursor.fetchall();
+print(result1)
+
+db1.close()
+
+—----------------------------
+
+
+# DELETE SELECTED VALUES INTO EMPLOYEE TABLE
+
+
+import MySQLdb as db2
+
+db1 = db2.connect(host="localhost",user="root",password="",db="employeedb1")
+
+cursor = db1.cursor()
+#cursor.execute("DROP database IF EXISTS employeedb1")
+
+#preparing Query to creat a database
+sql ='''CREATE TABLE EMPLOYEE(
+        EMP_ID INT(20) NOT NULL,
+    FIRST_NAME CHAR(20),
+    AGE INT,
+    SEX CHAR(1),
+    INCOME FLOAT
+)'''
+
+sql1='''INSERT INTO EMPLOYEE VALUES (1,"SHANTI",25,"F",25000)'''
+sql2='''INSERT INTO EMPLOYEE VALUES (2,"VAIBHAV",27,"M",28000)'''
+
+sql3='''DELETE FROM EMPLOYEE WHERE AGE<27'''
+
+sql4='''SELECT * from EMPLOYEE WHERE AGE<27'''
+
+try:
+    cursor.execute(sql3)
+    db1.commit()
+except:
+    db1.close()
+
+db1.close()
+
+write a pythgon program to create a database name product.
+create two table name product master and order detials the feild in produtc master are p id pname pcartegory product prioce quentity created by 
+order details feild order id p id forgain key customer name order price order address 
+do the folllowing opration on table 
+insert five record in product table 
+genrate data of order of two customer 
+display the record of customer product wise where order price >1000
+
+
+#create two table name product master and order detials the feild in produtc master are p id pname pcartegory product prioce quentity 
+
+import MySQLdb as db2
+db1 = db2.connect(host="localhost",user="root",password="",db="product")
+cursor=db1.cursor()
+'''
+sql ="CREATE database product";
+cursor.execute(sql)
+'''
+#product_master
+sql='''CREATE TABLE product_master(
+p_id INT(10) NOT NULL primary key,
+product_Name VARCHAR(50),
+p_category VARCHAR(10),
+p_price INT(15),
+p_quantity INT(5),
+Brand_Name VARCHAR(50)
+)''' 
+
+
+#order_detials
+sql1='''CREATE TABLE order_detials(
+o_id INT(10) NOT NULL primary key,
+p_id INT(10) NOT NULL,
+FOREIGN KEY (p_id) REFERENCES product_master(p_id),
+customer_Name VARCHAR(50),
+o_price INT(15),
+o_address VARCHAR(50)
+)''' 
+
+#insert five record in product table 
+sql2='''INSERT INTO product_master VALUES (1,"Soda","Home Product",250,100,"mona")'''
+sql3='''INSERT INTO product_master VALUES (2,"Fruti","Electroic Product",50,180,"sona")'''
+sql4='''INSERT INTO product_master VALUES (3,"Cup","Office Product",200,1000,"mode")'''
+sql5='''INSERT INTO product_master VALUES (4,"Bomb","Home Product",500,10,"nani")'''
+sql6='''INSERT INTO product_master VALUES (5,"Book","Home Product",200,800,"mapa")'''
+
+
+#cursor.execute(sql1)
+
+
+try:
+    cursor.execute(sql3)
+    cursor.execute(sql4)
+    cursor.execute(sql5)
+    cursor.execute(sql6)
+    db1.commit()
+except:
+    db1.close()
+
+result1 = cursor.fetchall();
+print(result1)
+
+
+db1.close()
+_____________________________________________
+
+import MySQLdb as db2
+db1 = db2.connect(host="localhost",user="root",password="",db="product")
+cursor=db1.cursor()
+'''
+sql ="CREATE database product";
+cursor.execute(sql)
+'''
+#product_master
+sql='''CREATE TABLE product_master(
+p_id INT(10) NOT NULL primary key,
+product_Name VARCHAR(50),
+p_category VARCHAR(10),
+p_price INT(15),
+p_quantity INT(5),
+Brand_Name VARCHAR(50)
+)''' 
+
+#order_detials
+sql1='''CREATE TABLE order_detials(
+o_id INT(10) NOT NULL primary key,
+p_id INT(10) NOT NULL,
+FOREIGN KEY (p_id) REFERENCES product_master(p_id),
+customer_Name VARCHAR(50),
+o_price INT(15),
+o_address VARCHAR(50)
+)''' 
+
+#INSERT INTO product_master
+sql2='''INSERT INTO product_master VALUES (1,"Soda","Home Product",250,100,"mona")'''
+sql3='''INSERT INTO product_master VALUES (2,"Fruti","Electroic Product",50,180,"sona")'''
+sql4='''INSERT INTO product_master VALUES (3,"Cup","Office Product",200,1000,"mode")'''
+sql5='''INSERT INTO product_master VALUES (4,"Bomb","Home Product",500,10,"nani")'''
+sql6='''INSERT INTO product_master VALUES (5,"Book","Home Product",200,800,"mapa")'''
+
+#INSERT INTO order_detials
+sql7='''INSERT INTO order_detials VALUES (1,1,"Sonali",250,"America")'''
+sql8='''INSERT INTO order_detials VALUES (2,2,"Jay",50,"India")'''
+sql9='''INSERT INTO order_detials VALUES (3,3,"Joly",200,"Japan")'''
+
+
+#print data of order of two customer 
+
+try:
+    cursor.execute(sql7)
+    cursor.execute(sql8)
+    cursor.execute(sql9)
+    
+    db1.commit()
+except:
+    db1.close()
+
+result1 = cursor.fetchall();
+print(result1)
+
+
+db1.close()
+
+___________________
+
+import MySQLdb as db2
+db1 = db2.connect(host="localhost",user="root",password="",db="product")
+cursor=db1.cursor()
+'''
+sql ="CREATE database product";
+cursor.execute(sql)
+'''
+#product_master
+sql='''CREATE TABLE product_master(
+p_id INT(10) NOT NULL primary key,
+product_Name VARCHAR(50),
+p_category VARCHAR(10),
+p_price INT(15),
+p_quantity INT(5),
+Brand_Name VARCHAR(50)
+)''' 
+
+#order_detials
+sql1='''CREATE TABLE order_detials(
+    o_id INT(10) NOT NULL primary key,
+p_id INT(10) NOT NULL,
+FOREIGN KEY (p_id) REFERENCES product_master(p_id),
+customer_Name VARCHAR(50),
+o_price INT(15),
+o_address VARCHAR(50)
+)''' 
+
+#INSERT INTO product_master
+sql2='''INSERT INTO product_master VALUES (1,"Soda","Home Product",250,100,"mona")'''
+sql3='''INSERT INTO product_master VALUES (2,"Fruti","Electroic Product",50,180,"sona")'''
+sql4='''INSERT INTO product_master VALUES (3,"Cup","Office Product",200,1000,"mode")'''
+sql5='''INSERT INTO product_master VALUES (4,"Bomb","Home Product",500,10,"nani")'''
+sql6='''INSERT INTO product_master VALUES (5,"Book","Home Product",200,800,"mapa")'''
+
+#INSERT INTO order_detials
+sql7='''INSERT INTO order_detials VALUES (1,1,"Sonali",250,"America")'''
+sql8='''INSERT INTO order_detials VALUES (2,2,"Jay",50,"India")'''
+sql9='''INSERT INTO order_detials VALUES (3,3,"Joly",200,"Japan")'''
+
+#display the record of customer product wise where order price <1000
+
+sql10='''SELECT * FROM order_detials,product_master WHERE order_detials.p_id=product_master.p_id and order_detials.o_price<1000'''
+cursor.execute(sql10)
+result = cursor.fetchall();
+print(result)
+
+db1.close()
+—-----------------------------------------------------------------
+Mcq test 25 marks 
+Topics
+Python Introduction
+Data Structure
+List 
+Tuple
+dictionary 
+List
+Conditional statements
+Loops
+Object oriented programming
+Exception handling 
+Gui
+database
+—-----------------------------------------------
+
+Make A Login Page:--
+
+import tkinter
+from tkinter import messagebox
+window = tkinter.Tk()
+window.title("Login Page using Python")
+window.geometry('750x550')
+window.configure(bg='#8F00FF')
+frame = tkinter.Frame(bg='#8F00FF')
+login_label = tkinter.Label(frame, text="Login Page Using Python", bg='#000000', fg="#DC143C", font=("Arial", 30))
+username_label = tkinter.Label(frame, text="Username", bg='#8F00FF', fg="#FFFFFF", font=("Arial", 16, 'bold'))
+password_label = tkinter.Label(frame, text="Password", bg='#8F00FF', fg="#FFFFFF", font=("Arial", 16, 'bold'))
+username_entry = tkinter.Entry(frame, font=("Arial", 16))
+password_entry = tkinter.Entry(frame, show="*", font=("Arial", 16))
+def login():
+    username = "Vivek"
+    password = "Vivek"
+    
+    if username_entry.get()== username and password_entry.get()== password:
+        messagebox.showinfo(title="login Successful!",message="You successfully Logged in")
+    else:
+        messagebox.showerror(title="error!",message="Invalid Login..!!")
+login_button = tkinter.Button(frame, text="Login", bg="#DC143C", fg="#FFFFFF", font=("Arial", 16), command=login)
+login_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
+username_label.grid(row=1, column=0)
+username_entry.grid(row=1, column=1, pady=20)
+password_label.grid(row=2, column=0)
+password_entry.grid(row=2, column=1, pady=20)
+login_button.grid(row=3, column=0, columnspan=2, pady=30)
+frame.pack()
+window.mainloop()
+        
+    
+
+_____________________________
+Make A Login Page with Registration:--
+________________—--- 
+#import modules
+ 
+from tkinter import *
+import os
+ 
+# Designing window for registration
+ 
+def register():
+    global register_screen
+    register_screen = Toplevel(main_screen)
+    register_screen.title("Register")
+    register_screen.geometry("300x350")
+ 
+    global username
+    global password
+    global name
+    global age
+    global phoneno
+    global username_entry
+    global password_entry
+    global name_entry
+    global age_entry
+    global phoneno_entry
+    username = StringVar()
+    password = StringVar()
+    name = StringVar()
+    age = StringVar()
+    phoneno = StringVar()
+ 
+    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="").pack()
+    name_lable = Label(register_screen, text="Name * ")
+    name_lable.pack()
+    name_entry = Entry(register_screen, textvariable=name)
+    name_entry.pack()
+    username_lable = Label(register_screen, text="Username * ")
+    username_lable.pack()
+    username_entry = Entry(register_screen, textvariable=username)
+    username_entry.pack()
+    password_lable = Label(register_screen, text="Password * ")
+    password_lable.pack()
+    password_entry = Entry(register_screen, textvariable=password, show='*')
+    password_entry.pack()
+    age_lable = Label(register_screen, text="age * ")
+    age_lable.pack()
+    age_entry = Entry(register_screen, textvariable=age)
+    age_entry.pack()
+    phoneno_lable = Label(register_screen, text="phoneno * ")
+    phoneno_lable.pack()
+    phoneno_entry = Entry(register_screen, textvariable=phoneno)
+    phoneno_entry.pack()
+    Label(register_screen, text="").pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="blue", command = register_user).pack()
+ 
+ 
+# Designing window for login 
+ 
+def login():
+    global login_screen
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("300x250")
+    Label(login_screen, text="Please enter details below to login").pack()
+    Label(login_screen, text="").pack()
+ 
+    global username_verify
+    global password_verify
+ 
+    username_verify = StringVar()
+    password_verify = StringVar()
+ 
+    global username_login_entry
+    global password_login_entry
+ 
+    Label(login_screen, text="Username * ").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="").pack()
+    Label(login_screen, text="Password * ").pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify, show= '*')
+    password_login_entry.pack()
+    Label(login_screen, text="").pack()
+    Button(login_screen, text="Login", width=10, height=1, command = login_verify).pack()
+ 
+# Implementing event on register button
+ 
+def register_user():
+ 
+    username_info = username.get()
+    password_info = password.get()
+    name_info = name.get()
+    age_info = age.get()
+    phoneno_info = phoneno.get()
+ 
+    file = open(username_info, "w")
+    file.write(name_info + "\n")
+    file.write(username_info + "\n")
+    file.write(password_info + "\n")
+    file.write(age_info + "\n")
+    file.write(phoneno_info)
+    file.close()
+ 
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+    name_entry.delete(0, END)
+    age_entry.delete(0, END)
+    phoneno_entry.delete(0, END)
+ 
+    Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
+ 
+# Implementing event on login button 
+ 
+def login_verify():
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+ 
+    list_of_files = os.listdir()
+    if username1 in list_of_files:
+        file1 = open(username1, "r")
+        verify = file1.read().splitlines()
+        if password1 in verify:
+            login_sucess()
+ 
+        else:
+            password_not_recognised()
+ 
+    else:
+        user_not_found()
+ 
+# Designing popup for login success
+ 
+def login_sucess():
+    global login_success_screen
+    login_success_screen = Toplevel(login_screen)
+    login_success_screen.title("Success")
+    login_success_screen.geometry("150x100")
+    Label(login_success_screen, text="Login Success").pack()
+    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+ 
+# Designing popup for login invalid password
+ 
+def password_not_recognised():
+    global password_not_recog_screen
+    password_not_recog_screen = Toplevel(login_screen)
+    password_not_recog_screen.title("Success")
+    password_not_recog_screen.geometry("150x100")
+    Label(password_not_recog_screen, text="Invalid Password ").pack()
+    Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
+ 
+# Designing popup for user not found
+ 
+def user_not_found():
+    global user_not_found_screen
+    user_not_found_screen = Toplevel(login_screen)
+    user_not_found_screen.title("Success")
+    user_not_found_screen.geometry("150x100")
+    Label(user_not_found_screen, text="User Not Found").pack()
+    Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
+ 
+# Deleting popups
+ 
+def delete_login_success():
+    login_success_screen.destroy()
+ 
+ 
+def delete_password_not_recognised():
+    password_not_recog_screen.destroy()
+ 
+ 
+def delete_user_not_found_screen():
+    user_not_found_screen.destroy()
+ 
+ 
+# Designing Main(first) window
+ 
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("300x250")
+    main_screen.title("Account Login")
+    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="").pack()
+    Button(text="Login", height="2", width="30", command = login).pack()
+    Label(text="").pack()
+    Button(text="Register", height="2", width="30", command=register).pack()
+ 
+    main_screen.mainloop()
+ 
+ 
+main_account_screen()
+ 
+________________________________
+
+
+Make A Login Page with Registration wih f:--
+_____________________________
+
+
+ 
+#import modules
+ 
+from tkinter import *
+import os
+ 
+# Designing window for registration
+ 
+def register():
+    global register_screen
+    register_screen = Toplevel(main_screen)
+    register_screen.title("Register")
+    register_screen.geometry("300x350")
+ 
+    global username
+    global password
+    global name
+    global age
+    global phoneno
+    global username_entry
+    global password_entry
+    global name_entry
+    global age_entry
+    global phoneno_entry
+    username = StringVar()
+    password = StringVar()
+    name = StringVar()
+    age = StringVar()
+    phoneno = StringVar()
+ 
+    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="").pack()
+    name_lable = Label(register_screen, text="Name * ")
+    name_lable.pack()
+    name_entry = Entry(register_screen, textvariable=name)
+    name_entry.pack()
+    username_lable = Label(register_screen, text="Username * ")
+    username_lable.pack()
+    username_entry = Entry(register_screen, textvariable=username)
+    username_entry.pack()
+    password_lable = Label(register_screen, text="Password * ")
+    password_lable.pack()
+    password_entry = Entry(register_screen, textvariable=password, show='*')
+    password_entry.pack()
+    age_lable = Label(register_screen, text="age * ")
+    age_lable.pack()
+    age_entry = Entry(register_screen, textvariable=age)
+    age_entry.pack()
+    phoneno_lable = Label(register_screen, text="phoneno * ")
+    phoneno_lable.pack()
+    phoneno_entry = Entry(register_screen, textvariable=phoneno)
+    phoneno_entry.pack()
+    Label(register_screen, text="").pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="blue", command = register_user).pack()
+ 
+ 
+# Designing window for login 
+ 
+def login():
+    global login_screen
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("300x400")
+    Label(login_screen, text="Please enter details below to login").pack()
+    Label(login_screen, text="").pack()
+ 
+    global username_verify
+    global password_verify
+    global name_verify
+    global age_verify
+    global phoneno_verify
+ 
+    username_verify = StringVar()
+    password_verify = StringVar()
+    name_verify = StringVar()
+    age_verify = StringVar()
+    phoneno_verify = StringVar()
+ 
+    global username_login_entry
+    global password_login_entry
+    global name_login_entry
+    global age_login_entry
+    global phoneno_login_entry
+    
+ 
+    Label(login_screen, text="name * ").pack()
+    name_login_entry = Entry(login_screen, textvariable=name_verify)
+    name_login_entry.pack()
+    Label(login_screen, text="").pack()
+    
+    Label(login_screen, text="Username * ").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="").pack()
+    
+    Label(login_screen, text="Password * ").pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify, show= '*')
+    password_login_entry.pack()
+    Label(login_screen, text="").pack()
+    
+    Label(login_screen, text="age * ").pack()
+    age_login_entry = Entry(login_screen, textvariable=age_verify)
+    age_login_entry.pack()
+    Label(login_screen, text="").pack()
+    
+    Label(login_screen, text="phoneno * ").pack()
+    phoneno_login_entry = Entry(login_screen, textvariable=phoneno_verify)
+    phoneno_login_entry.pack()
+    Label(login_screen, text="").pack()
+    
+    
+    Button(login_screen, text="Login", width=10, height=1, command = login_verify).pack()
+ 
+# Implementing event on register button
+ 
+def register_user():
+ 
+    username_info = username.get()
+    password_info = password.get()
+    name_info = name.get()
+    age_info = age.get()
+    phoneno_info = phoneno.get()
+ 
+    file = open(username_info, "w")
+    file.write(name_info + "\n")
+    file.write(username_info + "\n")
+    file.write(password_info + "\n")
+    file.write(age_info + "\n")
+    file.write(phoneno_info)
+    file.close()
+ 
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+    name_entry.delete(0, END)
+    age_entry.delete(0, END)
+    phoneno_entry.delete(0, END)
+ 
+    Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
+ 
+# Implementing event on login button 
+ 
+def login_verify():
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+    name = name_verify.get()
+    age = age_verify.get()
+    phoneno = phoneno_verify.get()
+    
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+    name_login_entry.delete(0, END)
+    age_login_entry.delete(0, END)
+    phoneno_login_entry.delete(0, END)
+ 
+    list_of_files = os.listdir()
+    if username1 in list_of_files:
+        file1 = open(username1, "r")
+        verify = file1.read().splitlines()
+        if password1 in verify:
+            login_sucess()
+ 
+        else:
+            password_not_recognised()
+ 
+    else:
+        user_not_found()
+ 
+# Designing popup for login success
+ 
+def login_sucess():
+    global login_success_screen
+    login_success_screen = Toplevel(login_screen)
+    login_success_screen.title("Success")
+    login_success_screen.geometry("150x100")
+    Label(login_success_screen, text="Login Success").pack()
+    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+ 
+# Designing popup for login invalid password
+ 
+def password_not_recognised():
+    global password_not_recog_screen
+    password_not_recog_screen = Toplevel(login_screen)
+    password_not_recog_screen.title("Success")
+    password_not_recog_screen.geometry("150x100")
+    Label(password_not_recog_screen, text="Invalid Password ").pack()
+    Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
+ 
+# Designing popup for user not found
+ 
+def user_not_found():
+    global user_not_found_screen
+    user_not_found_screen = Toplevel(login_screen)
+    user_not_found_screen.title("Success")
+    user_not_found_screen.geometry("150x100")
+    Label(user_not_found_screen, text="User Not Found").pack()
+    Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
+ 
+# Deleting popups
+ 
+def delete_login_success():
+    login_success_screen.destroy()
+ 
+ 
+def delete_password_not_recognised():
+    password_not_recog_screen.destroy()
+ 
+ 
+def delete_user_not_found_screen():
+    user_not_found_screen.destroy()
+ 
+ 
+# Designing Main(first) window
+ 
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("300x250")
+    main_screen.title("Account Login")
+    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="").pack()
+    Button(text="Login", height="2", width="30", command = login).pack()
+    Label(text="").pack()
+    Button(text="Register", height="2", width="30", command=register).pack()
+ 
+    main_screen.mainloop()
+ 
+ 
+main_account_screen()
+ 
+
+
+
+
+
+
+
+
+
+
+—---------------------------------------------------------------------------------
+
+Add product ,in sql last one table RGISTER FORM
+
+—----------------------------------------------------------------------
+
+#import modules
+
+from tkinter import *
+import os
+
+
+# Designing window for registration
+
+def register():
+    global register_screen
+    register_screen = Toplevel(main_screen)
+    register_screen.title("Register")
+    register_screen.geometry("300x350")
+
+    global username
+    global password
+    global name
+    global age
+    global phoneno
+    global username_entry
+    global password_entry
+    global name_entry
+    global age_entry
+    global phoneno_entry
+    username = StringVar()
+    password = StringVar()
+    name = StringVar()
+    age = StringVar()
+    phoneno = StringVar()
+
+    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="").pack()
+    name_lable = Label(register_screen, text="Name * ")
+    name_lable.pack()
+    name_entry = Entry(register_screen, textvariable=name)
+    name_entry.pack()
+    username_lable = Label(register_screen, text="Username * ")
+    username_lable.pack()
+    username_entry = Entry(register_screen, textvariable=username)
+    username_entry.pack()
+    password_lable = Label(register_screen, text="Password * ")
+    password_lable.pack()
+    password_entry = Entry(register_screen, textvariable=password, show='*')
+    password_entry.pack()
+    age_lable = Label(register_screen, text="age * ")
+    age_lable.pack()
+    age_entry = Entry(register_screen, textvariable=age)
+    age_entry.pack()
+    phoneno_lable = Label(register_screen, text="phoneno * ")
+    phoneno_lable.pack()
+    phoneno_entry = Entry(register_screen, textvariable=phoneno)
+    phoneno_entry.pack()
+    Label(register_screen, text="").pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="blue", command=register_user).pack()
+
+
+# Designing window for login
+
+def login():
+    global login_screen
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("300x400")
+    Label(login_screen, text="Please enter details below to login").pack()
+    Label(login_screen, text="").pack()
+
+    global username_verify
+    global password_verify
+    global name_verify
+    global age_verify
+    global phoneno_verify
+
+    username_verify = StringVar()
+    password_verify = StringVar()
+    name_verify = StringVar()
+    age_verify = StringVar()
+    phoneno_verify = StringVar()
+
+    global username_login_entry
+    global password_login_entry
+    global name_login_entry
+    global age_login_entry
+    global phoneno_login_entry
+
+    Label(login_screen, text="name * ").pack()
+    name_login_entry = Entry(login_screen, textvariable=name_verify)
+    name_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="Username * ").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="Password * ").pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify, show='*')
+    password_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="age * ").pack()
+    age_login_entry = Entry(login_screen, textvariable=age_verify)
+    age_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="phoneno * ").pack()
+    phoneno_login_entry = Entry(login_screen, textvariable=phoneno_verify)
+    phoneno_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Button(login_screen, text="Login", width=10, height=1, command=login_verify).pack()
+
+
+# Implementing event on register button
+
+def register_user():
+    username_info = username.get()
+    password_info = password.get()
+    name_info = name.get()
+    age_info = age.get()
+    phoneno_info = phoneno.get()
+
+    file = open(username_info, "w")
+    file.write(name_info + "\n")
+    file.write(username_info + "\n")
+    file.write(password_info + "\n")
+    file.write(age_info + "\n")
+    file.write(phoneno_info)
+    file.close()
+
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+    name_entry.delete(0, END)
+    age_entry.delete(0, END)
+    phoneno_entry.delete(0, END)
+
+    Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
+
+
+# Implementing event on login button
+
+def login_verify():
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+    name = name_verify.get()
+    age = age_verify.get()
+    phoneno = phoneno_verify.get()
+
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+    name_login_entry.delete(0, END)
+    age_login_entry.delete(0, END)
+    phoneno_login_entry.delete(0, END)
+
+    list_of_files = os.listdir()
+    if username1 in list_of_files:
+        file1 = open(username1, "r")
+        verify = file1.read().splitlines()
+        if password1 in verify:
+            login_sucess()
+
+        else:
+            password_not_recognised()
+
+    else:
+        user_not_found()
+
+
+# Designing popup for login success
+
+def login_sucess():
+    global login_success_screen
+    login_success_screen = Toplevel(login_screen)
+    login_success_screen.title("Success")
+    login_success_screen.geometry("150x100")
+    Label(login_success_screen, text="Login Success").pack()
+    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+
+
+# Designing popup for login invalid password
+
+def password_not_recognised():
+    global password_not_recog_screen
+    password_not_recog_screen = Toplevel(login_screen)
+    password_not_recog_screen.title("Success")
+    password_not_recog_screen.geometry("150x100")
+    Label(password_not_recog_screen, text="Invalid Password ").pack()
+    Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
+
+
+# Designing popup for user not found
+
+def user_not_found():
+    global user_not_found_screen
+    user_not_found_screen = Toplevel(login_screen)
+    user_not_found_screen.title("Success")
+    user_not_found_screen.geometry("150x100")
+    Label(user_not_found_screen, text="User Not Found").pack()
+    Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
+
+
+# Deleting popups
+
+def delete_login_success():
+    login_success_screen.destroy()
+
+
+def delete_password_not_recognised():
+    password_not_recog_screen.destroy()
+
+# Existing code...
+
+def add_product():
+    global product_screen
+    product_screen = Toplevel(main_screen)
+    product_screen.title("Add Product")
+    product_screen.geometry("300x350")
+
+    global product_name
+    global product_id
+    # Add more variables for other product details if needed...
+
+    product_name = StringVar()
+    product_id = StringVar()
+    # Add more variables for other product details if needed...
+
+    Label(product_screen, text="Please enter product details below", bg="blue").pack()
+    Label(product_screen, text="").pack()
+    product_name_label = Label(product_screen, text="Product Name * ")
+    product_name_label.pack()
+    product_name_entry = Entry(product_screen, textvariable=product_name)
+    product_name_entry.pack()
+    product_id_label = Label(product_screen, text="Product ID * ")
+    product_id_label.pack()
+    product_id_entry = Entry(product_screen, textvariable=product_id)
+    product_id_entry.pack()
+    # Add more labels and entry fields for other product details if needed...
+    Label(product_screen, text="").pack()
+    Button(product_screen, text="Register Product", width=15, height=1, bg="blue", command=register_product).pack()
+
+def register_product():
+    product_name_info = product_name.get()
+    product_id_info = product_id.get()
+    # Get other product details if needed...
+
+    # Here, you can save the product details to a file or database.
+    # For simplicity, let's print the details for now.
+    print("Product Name:", product_name_info)
+    print("Product ID:", product_id_info)
+    # Print other product details if needed...
+
+    product_name_entry.delete(0, END)
+    product_id_entry.delete(0, END)
+    # Clear other entry fields if needed...
+
+    Label(product_screen, text="Product Registration Success", fg="green", font=("calibri", 11)).pack()
+
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("300x250")
+    main_screen.title("Account Login")
+    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="").pack()
+    Button(text="Login", height="2", width="30", command=login).pack()
+    Label(text="").pack()
+    Button(text="Register", height="2", width="30", command=register).pack()
+    Label(text="").pack()
+    Button(text="Add Product", height="2", width="30", command=add_product).pack()
+
+    main_screen.mainloop()
+
+main_account_screen()
+
+
+def delete_user_not_found_screen():
+    user_not_found_screen.destroy()
+
+
+# Designing Main(first) window
+
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("300x250")
+    main_screen.title("Account Login")
+    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="").pack()
+    Button(text="Login", height="2", width="30", command=login).pack()
+    Label(text="").pack()
+    Button(text="Register", height="2", width="30", command=register).pack()
+
+    main_screen.mainloop()
+
+
+main_account_screen()
+
+
+
+
+
+
+
+
+
+
+
+
+def product_verify():
+    product_id1 = product_id_verify.get()
+    product_name1 = product_name_verify.get()
+    
+    product_id_entry.delete(0, END)
+    product_name_entry.delete(0, END)
+    
+    list_of_files = os.listdir()
+    if product_name1 in list_of_files:
+        file1 = open(product_name1, "r")
+        verify = file1.read().splitlines()
+        if product_id1 in verify:
+            product_registration_sucess()
+
+        else:
+            product_id_not_recognised()
+
+    else:
+        product_not_found()
+        
+def product_registration_sucess():
+    global product_registration_sucess_screen
+    product_registration_sucess_screen = Toplevel(product_registration_sucess_screen)
+    product_registration_sucess_screen.title("Success")
+    product_registration_sucess_screen.geometry("150x100")
+    Label(product_registration_sucess_screen, text="Product Registration Success").pack()
+    Button(product_registration_sucess_screen, text="OK", command=delete_login_success).pack()
+
+def product_id_not_recognised():
+    global product_id_not_recognised_screen
+    product_id_not_recognised_screen = Toplevel(login_screen)
+    product_id_not_recognised_screen.title("Success")
+    product_id_not_recognised_screen.geometry("150x100")
+    Label(product_id_not_recognised_screen, text="Invalid Product id ").pack()
+    Button(product_id_not_recognised_screen, text="OK", command=delete_password_not_recognised).pack()
+
+def product_not_found():
+    global product_not_found_screen
+    product_not_found_screen = Toplevel(login_screen)
+    product_not_found_screen.title("Success")
+    product_not_found_screen.geometry("150x100")
+    Label(user_not_found_screen, text="Product Not Found").pack()
+    Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
+
+
+—---------------------------------------------------------------------------------
+
+**COMPLETE Add product ,in sql last one table RGISTER FORM
+
+—----------------------------------------------------------------------
+#import modules
+
+from tkinter import *
+import os
+
+
+# Designing window for registration
+
+def register():
+    global register_screen
+    register_screen = Toplevel(main_screen)
+    register_screen.title("Register")
+    register_screen.geometry("300x350")
+
+    global username
+    global password
+    global name
+    global age
+    global phoneno
+    global username_entry
+    global password_entry
+    global name_entry
+    global age_entry
+    global phoneno_entry
+    username = StringVar()
+    password = StringVar()
+    name = StringVar()
+    age = StringVar()
+    phoneno = StringVar()
+
+    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="").pack()
+    name_lable = Label(register_screen, text="Name * ")
+    name_lable.pack()
+    name_entry = Entry(register_screen, textvariable=name)
+    name_entry.pack()
+    username_lable = Label(register_screen, text="Username * ")
+    username_lable.pack()
+    username_entry = Entry(register_screen, textvariable=username)
+    username_entry.pack()
+    password_lable = Label(register_screen, text="Password * ")
+    password_lable.pack()
+    password_entry = Entry(register_screen, textvariable=password, show='*')
+    password_entry.pack()
+    age_lable = Label(register_screen, text="age * ")
+    age_lable.pack()
+    age_entry = Entry(register_screen, textvariable=age)
+    age_entry.pack()
+    phoneno_lable = Label(register_screen, text="phoneno * ")
+    phoneno_lable.pack()
+    phoneno_entry = Entry(register_screen, textvariable=phoneno)
+    phoneno_entry.pack()
+    Label(register_screen, text="").pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="blue", command=register_user).pack()
+
+
+# Designing window for login
+
+def login():
+    global login_screen
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("300x400")
+    Label(login_screen, text="Please enter details below to login").pack()
+    Label(login_screen, text="").pack()
+
+    global username_verify
+    global password_verify
+    global name_verify
+    global age_verify
+    global phoneno_verify
+
+    username_verify = StringVar()
+    password_verify = StringVar()
+    name_verify = StringVar()
+    age_verify = StringVar()
+    phoneno_verify = StringVar()
+
+    global username_login_entry
+    global password_login_entry
+    global name_login_entry
+    global age_login_entry
+    global phoneno_login_entry
+
+    Label(login_screen, text="name * ").pack()
+    name_login_entry = Entry(login_screen, textvariable=name_verify)
+    name_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="Username * ").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="Password * ").pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify, show='*')
+    password_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="age * ").pack()
+    age_login_entry = Entry(login_screen, textvariable=age_verify)
+    age_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Label(login_screen, text="phoneno * ").pack()
+    phoneno_login_entry = Entry(login_screen, textvariable=phoneno_verify)
+    phoneno_login_entry.pack()
+    Label(login_screen, text="").pack()
+
+    Button(login_screen, text="Login", width=10, height=1, command=login_verify).pack()
+
+
+# Implementing event on register button
+
+def register_user():
+    username_info = username.get()
+    password_info = password.get()
+    name_info = name.get()
+    age_info = age.get()
+    phoneno_info = phoneno.get()
+
+    file = open(username_info, "w")
+    file.write(name_info + "\n")
+    file.write(username_info + "\n")
+    file.write(password_info + "\n")
+    file.write(age_info + "\n")
+    file.write(phoneno_info)
+    file.close()
+
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+    name_entry.delete(0, END)
+    age_entry.delete(0, END)
+    phoneno_entry.delete(0, END)
+
+    Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
+
+
+# Implementing event on login button
+
+def login_verify():
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+    name = name_verify.get()
+    age = age_verify.get()
+    phoneno = phoneno_verify.get()
+
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+    name_login_entry.delete(0, END)
+    age_login_entry.delete(0, END)
+    phoneno_login_entry.delete(0, END)
+
+    list_of_files = os.listdir()
+    if username1 in list_of_files:
+        file1 = open(username1, "r")
+        verify = file1.read().splitlines()
+        if password1 in verify:
+            login_sucess()
+
+        else:
+            password_not_recognised()
+
+    else:
+        user_not_found()
+
+
+# Designing popup for login success
+
+def login_sucess():
+    global login_success_screen
+    login_success_screen = Toplevel(login_screen)
+    login_success_screen.title("Success")
+    login_success_screen.geometry("150x100")
+    Label(login_success_screen, text="Login Success").pack()
+    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+
+
+# Designing popup for login invalid password
+
+def password_not_recognised():
+    global password_not_recog_screen
+    password_not_recog_screen = Toplevel(login_screen)
+    password_not_recog_screen.title("Success")
+    password_not_recog_screen.geometry("150x100")
+    Label(password_not_recog_screen, text="Invalid Password ").pack()
+    Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
+
+
+# Designing popup for user not found
+
+def user_not_found():
+    global user_not_found_screen
+    user_not_found_screen = Toplevel(login_screen)
+    user_not_found_screen.title("Success")
+    user_not_found_screen.geometry("150x100")
+    Label(user_not_found_screen, text="User Not Found").pack()
+    Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
+
+
+# Deleting popups
+
+def delete_login_success():
+    login_success_screen.destroy()
+
+
+def delete_password_not_recognised():
+    password_not_recog_screen.destroy()
+
+# Existing code...
+
+def add_product():
+    global product_screen
+    product_screen = Toplevel(main_screen)
+    product_screen.title("Add Product")
+    product_screen.geometry("300x390")
+
+
+    global product_name
+    global product_name_entry
+    
+    global product_id
+    global product_id_entry
+    
+    global product_category	
+    global product_category_entry
+    
+    global product_price	
+    global product_price_entry	
+    
+    global product_quantity
+    global product_quantity_entry
+	
+    global product_brand_name
+    global product_brand_name_entry
+    
+    
+    # Add more variables for other product details if needed...
+
+    product_name = StringVar()
+    product_id = StringVar()
+    product_category = StringVar()
+    product_price = StringVar()
+    product_quantity = StringVar()
+    product_brand_name = StringVar()
+    
+    # Add more variables for other product details if needed...
+
+    Label(product_screen, text="Please enter product details below", bg="blue").pack()
+    Label(product_screen, text="").pack()
+    
+    product_name_label = Label(product_screen, text="Product Name * ")
+    product_name_label.pack()
+    product_name_entry = Entry(product_screen, textvariable=product_name)
+    product_name_entry.pack()
+    
+        
+    product_id_label = Label(product_screen, text="Product ID * ")
+    product_id_label.pack()
+    product_id_entry = Entry(product_screen, textvariable=product_id)
+    product_id_entry.pack()
+    
+    
+    product_category_label = Label(product_screen, text="Product Category * ")
+    product_category_label.pack()
+    product_category_entry = Entry(product_screen, textvariable=product_category)
+    product_category_entry.pack()
+    
+    product_price_label = Label(product_screen, text="Product Price * ")
+    product_price_label.pack()
+    product_price_entry = Entry(product_screen, textvariable=product_price)
+    product_price_entry.pack()
+    
+    product_quantity_label = Label(product_screen, text="Product Quantity * ")
+    product_quantity_label.pack()
+    product_quantity_entry = Entry(product_screen, textvariable=product_quantity)
+    product_quantity_entry.pack()
+    
+    product_brand_name_entry_label = Label(product_screen, text="Product Brand Name Entry * ")
+    product_brand_name_entry_label.pack()
+    product_brand_name_entry = Entry(product_screen, textvariable=product_brand_name)
+    product_brand_name_entry.pack()
+
+    # Add more labels and entry fields for other product details if needed...
+    Label(product_screen, text="").pack()
+    Button(product_screen, text="Register Product", width=15, height=1, bg="blue", command=register_product).pack()
+
+def register_product():
+    product_name_info = product_name.get()
+    product_id_info = product_id.get()
+    product_category_info = product_category.get()
+    product_price_info = product_price.get()
+    product_quantity_info = product_quantity.get()
+    product_brand_name_info = product_brand_name.get()
+   
+    file = open(product_name_info, "w")
+    file.write(product_name_info + "\n")
+    file.write(product_id_info + "\n")
+    file.write(product_category_info + "\n")
+    file.write(product_price_info + "\n")
+    file.write(product_quantity_info + "\n")
+    file.write(product_brand_name_info + "\n")
+    
+    file.close()
+
+    product_name_entry.delete(0, END)
+    product_id_entry.delete(0, END)
+    product_category_entry.delete(0, END)
+    product_price_entry.delete(0, END)
+    product_quantity_entry.delete(0, END)
+    product_brand_name_entry.delete(0, END)
+    
+    # Clear other entry fields if needed...
+
+    Label(product_screen, text="Product Registration Success", fg="green", font=("calibri", 11)).pack()
+
+
+
+def delete_user_not_found_screen():
+    user_not_found_screen.destroy()
+
+
+# Designing Main(first) window
+
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("300x250")
+    main_screen.title("Account Login")
+    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="").pack()
+    Button(text="Login", height="2", width="30", command=login).pack()
+    Label(text="").pack()
+    Button(text="Register", height="2", width="30", command=register).pack()
+    Label(text="").pack()
+    Button(text="Add Product", height="2", width="30", command=add_product).pack()
+
+
+    main_screen.mainloop()
+
+
+main_account_screen()
+
+
+
+
+—---------------------------------------------------------------------------------
+Make a menu button
+
+—----------------------------------------------------------------------
+import tkinter as t
+from tkinter import filedialog
+global tr
+#tkinter.geometry("300x400")
+root = t.Tk()
+root.title('Menu Demonstration')
+  
+# Creating Menubar
+menubar = t.Menu(root)
+  
+# Adding File Menu and commands
+file =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='File', menu = file)
+file.add_command(label ='New File', command = None)
+file.add_command(label ='Open...', command = None)
+file.add_command(label ='Save', command = None)
+file.add_separator()
+file.add_command(label ='Exit', command = root.destroy)
+
+# Adding Search Menu and commands
+search =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Search', menu = search)
+search.add_command(label ='Find Next', command = None)
+search.add_command(label ='Find Text', command = None) 
+search.add_command(label ='Rplace Tex', command = None)
+search.add_separator()
+search.add_command(label ='Find in Files', command = root.destroy)
+  
+# Adding Edit Menu and commands
+edit =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Edit', menu = edit)
+edit.add_command(label ='Cut', command = None)
+edit.add_command(label ='Copy', command = None)
+edit.add_command(label ='Paste', command = None)
+edit.add_command(label ='Select All', command = None)
+edit.add_separator()
+edit.add_command(label ='Find...', command = None)
+edit.add_command(label ='Find again', command = None)
+  
+# Adding Help Menu
+help_ = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Help', menu = help_)
+help_.add_command(label ='Tk Help', command = None)
+help_.add_command(label ='Demo', command = None)
+help_.add_separator()
+help_.add_command(label ='About Tk', command = None)
+
+about = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='About', menu = about)
+about.add_command(label ='Version', command = None)
+about.add_command(label ='Information', command = None)
+about.add_separator()
+about.add_command(label ='Contact us', command = None)
+  
+# display Menu
+root.config(menu = menubar)
+root.mainloop()
+
+
+—---------------------------------------------------------------------------------
+Make a menu button and open TEXT file
+
+—----------------------------------------------------------------------
+import tkinter as t
+from tkinter import filedialog
+global tr
+#tkinter.geometry("300x400")
+root = t.Tk()
+root.title('Menu Demonstration')
+  
+# Creating Menubar
+menubar = t.Menu(root)
+
+def open_file():
+    fname=filedialog.askopenfilename(parent=root,title="select a file")
+    if fname!=None:
+        f=open(fname,"r")
+        c=f.read()
+        tr=t.Text(root,width=80,hight=20)
+        tr.pack()
+        tr.insert(1.0,c)
+        f.close()
+
+# Adding File Menu and commands
+file =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='File', menu = file)
+file.add_command(label ='New File', command = None)
+file.add_command(label ='Open...', command = open_file)
+file.add_command(label ='Save', command = None)
+file.add_separator()
+file.add_command(label ='Exit', command = root.destroy)
+
+# Adding Search Menu and commands
+search =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Search', menu = search)
+search.add_command(label ='Find Next', command = None)
+search.add_command(label ='Find Text', command = None) 
+search.add_command(label ='Rplace Tex', command = None)
+search.add_separator()
+search.add_command(label ='Find in Files', command = root.destroy)
+  
+# Adding Edit Menu and commands
+edit =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Edit', menu = edit)
+edit.add_command(label ='Cut', command = None)
+edit.add_command(label ='Copy', command = None)
+edit.add_command(label ='Paste', command = None)
+edit.add_command(label ='Select All', command = None)
+edit.add_separator()
+edit.add_command(label ='Find...', command = None)
+edit.add_command(label ='Find again', command = None)
+  
+# Adding Help Menu
+help_ = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Help', menu = help_)
+help_.add_command(label ='Tk Help', command = None)
+help_.add_command(label ='Demo', command = None)
+help_.add_separator()
+help_.add_command(label ='About Tk', command = None)
+
+about = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='About', menu = about)
+about.add_command(label ='Version', command = None)
+about.add_command(label ='Information', command = None)
+about.add_separator()
+about.add_command(label ='Contact us', command = None)
+  
+# display Menu
+root.config(menu = menubar)
+root.mainloop()
+
+
+_________________________________
+
+import tkinter as t
+from tkinter import filedialog
+global tr
+
+
+#Set the geometry of tkinter window
+
+root = t.Tk()
+root.title('Menu Demonstration')
+  
+# Creating Menubar
+menubar = t.Menu(root)
+
+def open_file():
+    fname = filedialog.askopenfilename(parent=root,title="select a file")
+    if fname!=None:
+        f=open(fname,"r")
+        c=f.read()
+        tr=t.Text(root,width=80,height=20)
+        tr.pack()
+        tr.insert(1.0,c)
+        f.close()  
+        
+# Define a function to save a file
+def save_file():
+    # Use the asksaveasfilename function to get the name of the file to save
+    fname = filedialog.asksaveasfilename(parent=root, defaultextension='.txt', title='Save File')
+    if fname != None:
+        # Open the file and write the contents of the text widget to it
+        f = open(fname, 'w')
+        f.write(text.get('1.0', t.END))
+        f.close()
+
+# Adding File Menu and commands
+file =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='File', menu = file)
+file.add_command(label ='New File', command = None)
+file.add_command(label ='Open...', command = open_file)
+file.add_command(label ='Save', command = save_file)
+file.add_separator()
+file.add_command(label ='Exit', command = root.destroy)
+
+# Adding Search Menu and commands
+search =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Search', menu = search)
+search.add_command(label ='Find Next', command = None)
+search.add_command(label ='Find Text', command = None) 
+search.add_command(label ='Rplace Tex', command = None)
+search.add_separator()
+search.add_command(label ='Find in Files', command = root.destroy)
+  
+# Adding Edit Menu and commands
+edit =t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Edit', menu = edit)
+edit.add_command(label ='Cut', command = None)
+edit.add_command(label ='Copy', command = None)
+edit.add_command(label ='Paste', command = None)
+edit.add_command(label ='Select All', command = None)
+edit.add_separator()
+edit.add_command(label ='Find...', command = None)
+edit.add_command(label ='Find again', command = None)
+  
+# Adding Help Menu
+help_ = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Help', menu = help_)
+help_.add_command(label ='Tk Help', command = None)
+help_.add_command(label ='Demo', command = None)
+help_.add_separator()
+help_.add_command(label ='About Tk', command = None)
+
+about = t.Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='About', menu = about)
+about.add_command(label ='Version', command = None)
+about.add_command(label ='Information', command = None)
+about.add_separator()
+about.add_command(label ='Contact us', command = None)
+  
+# display Menu
+root.config(menu = menubar)
+root.mainloop()
+
+
+—----------
+—----------------------------------------------------
+
